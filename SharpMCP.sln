@@ -1,0 +1,79 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8E47278B-A4C1-4D58-9C0A-B5D6A0B07F44}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpMCP.Core", "src\SharpMCP.Core\SharpMCP.Core.csproj", "{F1A7B5E3-8C2F-4E7A-9B5D-2A1C8F9E3D4A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpMCP.Server", "src\SharpMCP.Server\SharpMCP.Server.csproj", "{A2B4C6D8-1E3F-5A7B-8C9D-3B2E4F5A6C7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpMCP.Tools.Common", "src\SharpMCP.Tools.Common\SharpMCP.Tools.Common.csproj", "{C3D5E7F9-2F4A-6B8C-9D0E-4C3F5A6B7E8F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{7F48B7C2-D5E3-4A9F-8B1C-3E2D5C6A9F8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpMCP.Core.Tests", "tests\SharpMCP.Core.Tests\SharpMCP.Core.Tests.csproj", "{E5F7A9B1-4F6C-8D0E-1F2A-6E5B7C8D9F0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpMCP.Server.Tests", "tests\SharpMCP.Server.Tests\SharpMCP.Server.Tests.csproj", "{B6C7D8E9-0F1A-2B3C-4D5E-6F7A8B9C0D1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{9A5C8D3E-F6B2-4C7E-8D0F-1A3B5E7C9F2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileSystemServer", "examples\FileSystemServer\FileSystemServer.csproj", "{F6A8B0C2-5D7E-9F1A-2B3C-7E8D9A0B1C3F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A1B2C3D4-E5F6-7890-1234-567890ABCDEF}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		ROADMAP.md = ROADMAP.md
+		CHANGELOG.md = CHANGELOG.md
+		.gitignore = .gitignore
+		LICENSE = LICENSE
+		CONTRIBUTING.md = CONTRIBUTING.md
+		.editorconfig = .editorconfig
+		global.json = global.json
+		Directory.Build.props = Directory.Build.props
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution		
+		{F1A7B5E3-8C2F-4E7A-9B5D-2A1C8F9E3D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1A7B5E3-8C2F-4E7A-9B5D-2A1C8F9E3D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1A7B5E3-8C2F-4E7A-9B5D-2A1C8F9E3D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1A7B5E3-8C2F-4E7A-9B5D-2A1C8F9E3D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2B4C6D8-1E3F-5A7B-8C9D-3B2E4F5A6C7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2B4C6D8-1E3F-5A7B-8C9D-3B2E4F5A6C7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2B4C6D8-1E3F-5A7B-8C9D-3B2E4F5A6C7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2B4C6D8-1E3F-5A7B-8C9D-3B2E4F5A6C7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3D5E7F9-2F4A-6B8C-9D0E-4C3F5A6B7E8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3D5E7F9-2F4A-6B8C-9D0E-4C3F5A6B7E8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3D5E7F9-2F4A-6B8C-9D0E-4C3F5A6B7E8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3D5E7F9-2F4A-6B8C-9D0E-4C3F5A6B7E8F}.Release|Any CPU.Build.0 = Release|Any CPU		
+		{E5F7A9B1-4F6C-8D0E-1F2A-6E5B7C8D9F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5F7A9B1-4F6C-8D0E-1F2A-6E5B7C8D9F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5F7A9B1-4F6C-8D0E-1F2A-6E5B7C8D9F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5F7A9B1-4F6C-8D0E-1F2A-6E5B7C8D9F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6C7D8E9-0F1A-2B3C-4D5E-6F7A8B9C0D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6C7D8E9-0F1A-2B3C-4D5E-6F7A8B9C0D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6C7D8E9-0F1A-2B3C-4D5E-6F7A8B9C0D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6C7D8E9-0F1A-2B3C-4D5E-6F7A8B9C0D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6A8B0C2-5D7E-9F1A-2B3C-7E8D9A0B1C3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6A8B0C2-5D7E-9F1A-2B3C-7E8D9A0B1C3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6A8B0C2-5D7E-9F1A-2B3C-7E8D9A0B1C3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6A8B0C2-5D7E-9F1A-2B3C-7E8D9A0B1C3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution		
+		{F1A7B5E3-8C2F-4E7A-9B5D-2A1C8F9E3D4A} = {8E47278B-A4C1-4D58-9C0A-B5D6A0B07F44}
+		{A2B4C6D8-1E3F-5A7B-8C9D-3B2E4F5A6C7D} = {8E47278B-A4C1-4D58-9C0A-B5D6A0B07F44}
+		{C3D5E7F9-2F4A-6B8C-9D0E-4C3F5A6B7E8F} = {8E47278B-A4C1-4D58-9C0A-B5D6A0B07F44}		
+		{E5F7A9B1-4F6C-8D0E-1F2A-6E5B7C8D9F0A} = {7F48B7C2-D5E3-4A9F-8B1C-3E2D5C6A9F8B}
+		{B6C7D8E9-0F1A-2B3C-4D5E-6F7A8B9C0D1E} = {7F48B7C2-D5E3-4A9F-8B1C-3E2D5C6A9F8B}
+		{F6A8B0C2-5D7E-9F1A-2B3C-7E8D9A0B1C3F} = {9A5C8D3E-F6B2-4C7E-8D0F-1A3B5E7C9F2D}
+	EndGlobalSection
+EndGlobal

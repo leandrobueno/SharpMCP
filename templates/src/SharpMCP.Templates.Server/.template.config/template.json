@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "SharpMCP Contributors",
+  "classifications": ["MCP", "Server", "C#"],
+  "identity": "SharpMCP.Templates.Server",
+  "name": "SharpMCP Server",
+  "shortName": "mcpserver",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "SharpMCP.Templates.Server",
+  "preferNameDirectory": true,
+  "symbols": {
+    "Framework": {
+      "type": "parameter",
+      "description": "The target framework for the project",
+      "datatype": "choice",
+      "choices": [
+        {
+          "choice": "net9.0",
+          "description": ".NET 9"
+        }
+      ],
+      "defaultValue": "net9.0",
+      "replaces": "net9.0"
+    },
+    "SkipRestore": {
+      "type": "parameter",
+      "datatype": "bool",
+      "description": "Skip restore after project creation",
+      "defaultValue": "false"
+    }
+  },
+  "primaryOutputs": [
+    {
+      "path": "SharpMCP.Templates.Server.csproj"
+    }
+  ],
+  "postActions": [
+    {
+      "condition": "(!SkipRestore)",
+      "description": "Restore NuGet packages",
+      "manualInstructions": [
+        {
+          "text": "Run 'dotnet restore'"
+        }
+      ],
+      "actionId": "210D431B-A78B-4D2F-B762-4ED3E3EA9025",
+      "continueOnError": true
+    }
+  ]
+}

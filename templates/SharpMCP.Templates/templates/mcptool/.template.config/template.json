@@ -1,0 +1,66 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "SharpMCP Contributors",
+  "classifications": ["SharpMCP", "MCP", "Tool", "Item"],
+  "identity": "SharpMCP.Tool",
+  "name": "SharpMCP Tool",
+  "shortName": "mcptool",
+  "tags": {
+    "language": "C#",
+    "type": "item"
+  },
+  "sourceName": "ToolTemplate",
+  "symbols": {
+    "namespace": {
+      "type": "parameter",
+      "description": "Namespace for the tool",
+      "datatype": "text",
+      "defaultValue": "MyNamespace",
+      "replaces": "ToolNamespace"
+    },
+    "async": {
+      "type": "parameter",
+      "description": "Make the tool async",
+      "datatype": "bool",
+      "defaultValue": "true"
+    },
+    "description": {
+      "type": "parameter",
+      "description": "Description of what the tool does",
+      "datatype": "text",
+      "defaultValue": "Performs a specific operation",
+      "replaces": "TOOL_DESCRIPTION"
+    },
+    "toolId": {
+      "type": "parameter",
+      "description": "The ID used to identify the tool",
+      "datatype": "text",
+      "defaultValue": "my_tool",
+      "replaces": "TOOL_ID"
+    }
+  },
+  "sources": [
+    {
+      "modifiers": [
+        {
+          "condition": "(!async)",
+          "exclude": ["ToolTemplate.Async.cs"]
+        },
+        {
+          "condition": "(async)",
+          "exclude": ["ToolTemplate.Sync.cs"]
+        }
+      ]
+    }
+  ],
+  "primaryOutputs": [
+    {
+      "condition": "(async)",
+      "path": "ToolTemplate.Async.cs"
+    },
+    {
+      "condition": "(!async)",
+      "path": "ToolTemplate.Sync.cs"
+    }
+  ]
+}

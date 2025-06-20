@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591</NoWarn>
+    
+    <!-- Package Information -->
+    <PackageId>SharpMCP.Core</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>SharpMCP Contributors</Authors>
+    <Description>Core abstractions and interfaces for building MCP servers with SharpMCP</Description>
+    <PackageTags>mcp;model-context-protocol;ai;llm</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/leandrobueno/SharpMCP</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/leandrobueno/SharpMCP</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="9.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.6" />
+  </ItemGroup>
+
+</Project>
