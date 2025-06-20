@@ -11,7 +11,7 @@
     <NoWarn>$(NoWarn);CS1591</NoWarn>
     
     <!-- Versioning -->
-    <VersionPrefix>1.0.0</VersionPrefix>
+    <VersionPrefix>1.0.1</VersionPrefix>
     
     <!-- Package metadata -->
     <Authors>SharpMCP Contributors</Authors>
