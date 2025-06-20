@@ -182,8 +182,6 @@ SharpMCP follows a modular architecture:
 Check out the [examples](examples/) directory for complete working examples:
 
 - **[FileSystemServer](examples/FileSystemServer)** - Secure file system access
-- **[DatabaseServer](examples/DatabaseServer)** - SQL database operations (Coming Soon)
-- **[ApiGatewayServer](examples/ApiGatewayServer)** - REST API integration (Coming Soon)
 
 ## Documentation
 
@@ -239,29 +237,13 @@ See our [detailed roadmap](ROADMAP.md) for planned features and milestones.
 
 - **GitHub Discussions** - Ask questions and share ideas
 - **Issues** - Report bugs or request features
-- **Discord** - Join our community chat (Coming Soon)
+
 
 ## License
 
 SharpMCP is licensed under the [MIT License](LICENSE).
 
-## Development Status
 
-### Completed Components
-- ✅ Core abstractions and interfaces (SharpMCP.Core)
-- ✅ Protocol layer with JSON-RPC support
-- ✅ Tool system interfaces and attributes
-- ✅ JSON Schema attribute system
-- ✅ Transport abstractions
-- ✅ Server interfaces and builder pattern
-- ✅ Utility classes and response builders
-- ✅ Common file system tools (SharpMCP.Tools.Common)
-- ✅ Archive operations and security utilities
-
-### In Progress
-- 🔄 Server implementation (SharpMCP.Server)
-- 🔄 StdioTransport implementation
-- 🔄 Enhanced testing framework
 
 ## Acknowledgments
 
