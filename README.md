@@ -3,7 +3,7 @@
 <div align="center">
 
 [![NuGet Version](https://img.shields.io/nuget/v/SharpMCP.Server)](https://www.nuget.org/packages/SharpMCP.Server)
-[![Build Status](https://img.shields.io/github/actions/workflow/status/leandrobueno/SharpMCP/build.yml?branch=main)](https://github.com/leandrobueno/SharpMCP/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/leandrobueno/SharpMCP/ci-cd.yml?branch=main)](https://github.com/leandrobueno/SharpMCP/actions)
 [![License](https://img.shields.io/github/license/leandrobueno/SharpMCP)](LICENSE)
 [![Documentation](https://img.shields.io/badge/docs-available-brightgreen)](https://leandrobueno.github.io/SharpMCP)
 
