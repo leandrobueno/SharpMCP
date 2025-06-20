@@ -1,7 +1,6 @@
-using SharpMCP;
 using SharpMCP.Core.Tools;
 using SharpMCP.Core.Protocol;
-using SharpMCP.Core.Utilities;
+using SharpMCP.Core.Utils;
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
@@ -11,9 +10,13 @@ namespace McpToolSetTemplate.Tools;
 /// <summary>
 /// Tool for data validation operations
 /// </summary>
-[McpTool("validator", "Validates data against various rules and patterns")]
 public class ValidationTool : McpToolBase<ValidationArgs>
 {
+    /// <inheritdoc />
+    public override string Name => "validator";
+
+    /// <inheritdoc />
+    public override string? Description => "Validates data against various rules and patterns";
     protected override Task<ToolResponse> ExecuteAsync(ValidationArgs args, CancellationToken cancellationToken)
     {
         var results = new List<ValidationResult>();
@@ -91,8 +94,18 @@ public class ValidationTool : McpToolBase<ValidationArgs>
     private bool ValidateLength(string data, ValidationRule rule)
     {
         var length = data.Length;
-        if (rule.MinLength.HasValue && length < rule.MinLength.Value) return false;
-        if (rule.MaxLength.HasValue && length > rule.MaxLength.Value) return false;
+        if (rule.MinLength.HasValue && length < rule.MinLength.Value)
+        {
+            return false;
+        }
+
+
+        if (rule.MaxLength.HasValue && length > rule.MaxLength.Value)
+        {
+            return false;
+        }
+
+
         return true;
     }
 }

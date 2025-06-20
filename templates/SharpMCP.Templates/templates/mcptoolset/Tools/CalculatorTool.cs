@@ -1,7 +1,6 @@
-using SharpMCP;
 using SharpMCP.Core.Tools;
 using SharpMCP.Core.Protocol;
-using SharpMCP.Core.Utilities;
+using SharpMCP.Core.Utils;
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 
@@ -10,9 +9,14 @@ namespace McpToolSetTemplate.Tools;
 /// <summary>
 /// Calculator tool for mathematical operations
 /// </summary>
-[McpTool("calculator", "Performs mathematical calculations")]
 public class CalculatorTool : McpToolBase<CalculatorArgs>
 {
+    /// <inheritdoc />
+    public override string Name => "calculator";
+
+    /// <inheritdoc />
+    public override string? Description => "Performs mathematical calculations";
+
     protected override Task<ToolResponse> ExecuteAsync(CalculatorArgs args, CancellationToken cancellationToken)
     {
         try
@@ -24,7 +28,12 @@ public class CalculatorTool : McpToolBase<CalculatorArgs>
                 "multiply" => args.Values.Aggregate(1.0, (a, b) => a * b),
                 "divide" => args.Values.Aggregate((a, b) =>
                 {
-                    if (b == 0) throw new DivideByZeroException();
+                    if (b == 0)
+                    {
+                        throw new DivideByZeroException();
+                    }
+
+
                     return a / b;
                 }),
                 "average" => args.Values.Average(),
@@ -43,7 +52,7 @@ public class CalculatorTool : McpToolBase<CalculatorArgs>
                 precision = Math.Round(result, args.Precision ?? 2)
             };
 
-            return Task.FromResult(ToolResponseBuilder.Success(response));
+            return Task.FromResult(ToolResponseBuilder.Success(response.ToString()));
         }
         catch (Exception ex)
         {

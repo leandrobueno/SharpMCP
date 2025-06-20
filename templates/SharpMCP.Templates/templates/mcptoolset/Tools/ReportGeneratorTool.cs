@@ -1,7 +1,6 @@
-using SharpMCP;
 using SharpMCP.Core.Tools;
 using SharpMCP.Core.Protocol;
-using SharpMCP.Core.Utilities;
+using SharpMCP.Core.Utils;
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 using System.Text;
@@ -11,9 +10,13 @@ namespace McpToolSetTemplate.Tools;
 /// <summary>
 /// Tool for generating various types of reports
 /// </summary>
-[McpTool("report_generator", "Generates formatted reports from data")]
 public class ReportGeneratorTool : McpToolBase<ReportGeneratorArgs>
 {
+    /// <inheritdoc />
+    public override string Name => "report_generator";
+
+    /// <inheritdoc />
+    public override string? Description => "Generates formatted reports from data";
     protected override async Task<ToolResponse> ExecuteAsync(ReportGeneratorArgs args, CancellationToken cancellationToken)
     {
         await Task.Delay(100, cancellationToken);

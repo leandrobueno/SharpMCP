@@ -1,3 +1,5 @@
+using Microsoft.Extensions.Logging;
+
 namespace McpServerTemplate.Services;
 
 /// <summary>

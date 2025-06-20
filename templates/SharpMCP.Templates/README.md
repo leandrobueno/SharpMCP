@@ -39,15 +39,17 @@ dotnet new mcptoolset -n MyToolCollection
 ## Template Options
 
 ### mcpserver
-- `--framework` - Target framework (default: net9.0)
-- `--use-di` - Include dependency injection setup (default: false)
+- `--framework` - Target framework (default: net9.0, options: net8.0, net9.0)
+- `--useDI` - Include dependency injection setup (default: false)
 
 ### mcptool
 - `--async` - Make tool async (default: true)
-- `--namespace` - Namespace for the tool (default: current namespace)
+- `--namespace` - Namespace for the tool (default: MyNamespace)
+- `--description` - Description of what the tool does (default: "Performs a specific operation")
+- `--toolId` - The ID used to identify the tool (default: my_tool)
 
 ### mcptoolset
-- `--framework` - Target framework (default: net9.0)
-- `--tool-count` - Number of example tools to create (default: 3)
+- `--framework` - Target framework (default: net9.0, options: net8.0, net9.0)
+- `--toolCount` - Number of example tools to create (default: 3, options: 2, 3, 5)
 
 For more information, visit [SharpMCP Documentation](https://github.com/leandrobueno/SharpMCP)

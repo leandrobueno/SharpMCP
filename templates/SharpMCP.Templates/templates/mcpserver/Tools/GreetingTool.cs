@@ -1,7 +1,6 @@
-using SharpMCP;
 using SharpMCP.Core.Tools;
 using SharpMCP.Core.Protocol;
-using SharpMCP.Core.Utilities;
+using SharpMCP.Core.Utils;
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 
@@ -10,9 +9,14 @@ namespace McpServerTemplate.Tools;
 /// <summary>
 /// A simple tool that greets users
 /// </summary>
-[McpTool("greeting", "Sends a personalized greeting message")]
 public class GreetingTool : McpToolBase<GreetingArgs>
 {
+    /// <inheritdoc />
+    public override string Name => "greeting";
+
+    /// <inheritdoc />
+    public override string? Description => "Sends a personalized greeting message";
+
     /// <summary>
     /// Executes the greeting tool
     /// </summary>

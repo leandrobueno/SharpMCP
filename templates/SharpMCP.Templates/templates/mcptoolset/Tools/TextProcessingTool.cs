@@ -1,7 +1,6 @@
-using SharpMCP;
 using SharpMCP.Core.Tools;
 using SharpMCP.Core.Protocol;
-using SharpMCP.Core.Utilities;
+using SharpMCP.Core.Utils;
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 using System.Text;
@@ -11,9 +10,14 @@ namespace McpToolSetTemplate.Tools;
 /// <summary>
 /// Tool for text processing operations
 /// </summary>
-[McpTool("text_processing", "Performs various text processing operations")]
 public class TextProcessingTool : McpToolBase<TextProcessingArgs>
 {
+    /// <inheritdoc />
+    public override string Name => "text_processing";
+
+    /// <inheritdoc />
+    public override string? Description => "Performs various text processing operations";
+
     protected override async Task<ToolResponse> ExecuteAsync(TextProcessingArgs args, CancellationToken cancellationToken)
     {
         await Task.Delay(50, cancellationToken); // Simulate work

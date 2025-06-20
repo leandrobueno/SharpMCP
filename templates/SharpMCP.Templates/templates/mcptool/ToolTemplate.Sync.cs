@@ -1,7 +1,6 @@
-using SharpMCP;
 using SharpMCP.Core.Tools;
 using SharpMCP.Core.Protocol;
-using SharpMCP.Core.Utilities;
+using SharpMCP.Core.Utils;
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 
@@ -10,9 +9,14 @@ namespace ToolNamespace;
 /// <summary>
 /// TOOL_DESCRIPTION
 /// </summary>
-[McpTool("TOOL_ID", "TOOL_DESCRIPTION")]
 public class ToolTemplate : McpToolBase<ToolTemplateArgs>
 {
+    /// <inheritdoc />
+    public override string Name => "TOOL_ID";
+
+    /// <inheritdoc />
+    public override string? Description => "TOOL_DESCRIPTION";
+
     /// <summary>
     /// Executes the tool operation
     /// </summary>

@@ -1,7 +1,6 @@
-using SharpMCP;
 using SharpMCP.Core.Tools;
 using SharpMCP.Core.Protocol;
-using SharpMCP.Core.Utilities;
+using SharpMCP.Core.Utils;
 using System.ComponentModel;
 using System.Text.Json.Serialization;
 using System.Text.Json;
@@ -11,9 +10,14 @@ namespace McpToolSetTemplate.Tools;
 /// <summary>
 /// Tool for data transformation operations
 /// </summary>
-[McpTool("data_transform", "Transforms data between different formats")]
 public class DataTransformTool : McpToolBase<DataTransformArgs>
 {
+    /// <inheritdoc />
+    public override string Name => "data_transform";
+
+    /// <inheritdoc />
+    public override string? Description => "Transforms data between different formats";
+
     protected override async Task<ToolResponse> ExecuteAsync(DataTransformArgs args, CancellationToken cancellationToken)
     {
         await Task.Delay(50, cancellationToken);
@@ -42,7 +46,11 @@ public class DataTransformTool : McpToolBase<DataTransformArgs>
     private string JsonToCsv(string jsonData)
     {
         var array = JsonSerializer.Deserialize<JsonElement[]>(jsonData);
-        if (array == null || array.Length == 0) return "";
+        if (array == null || array.Length == 0)
+        {
+            return "";
+        }
+
 
         var headers = array[0].EnumerateObject().Select(p => p.Name).ToList();
         var csv = new List<string> { string.Join(",", headers) };
@@ -52,7 +60,12 @@ public class DataTransformTool : McpToolBase<DataTransformArgs>
             var values = headers.Select(h =>
             {
                 if (item.TryGetProperty(h, out var prop))
+                {
+
                     return prop.ValueKind == JsonValueKind.String ? $"\"{prop.GetString()}\"" : prop.ToString();
+                }
+
+
                 return "";
             });
             csv.Add(string.Join(",", values));
@@ -64,7 +77,11 @@ public class DataTransformTool : McpToolBase<DataTransformArgs>
     private string CsvToJson(string csvData)
     {
         var lines = csvData.Split('\n', StringSplitOptions.RemoveEmptyEntries);
-        if (lines.Length < 2) return "[]";
+        if (lines.Length < 2)
+        {
+            return "[]";
+        }
+
 
         var headers = lines[0].Split(',').Select(h => h.Trim('"')).ToArray();
         var result = new List<Dictionary<string, string>>();
@@ -129,7 +146,11 @@ public class DataTransformTool : McpToolBase<DataTransformArgs>
 
     private string FilterJson(string json, string? path)
     {
-        if (string.IsNullOrEmpty(path)) return json;
+        if (string.IsNullOrEmpty(path))
+        {
+            return json;
+        }
+
 
         var element = JsonSerializer.Deserialize<JsonElement>(json);
         var pathParts = path.Split('.');

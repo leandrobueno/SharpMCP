@@ -48,6 +48,10 @@
         {
           "condition": "(!useDI)",
           "exclude": ["Services/**"]
+        },
+        {
+          "condition": "(useDI)",
+          "exclude": ["Tools/**"]
         }
       ]
     }
