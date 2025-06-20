@@ -10,7 +10,6 @@
     
     <!-- Package Information -->
     <PackageId>SharpMCP.Server</PackageId>
-    <Version>1.0.0</Version>
     <Authors>SharpMCP Contributors</Authors>
     <Description>Server implementation for building MCP servers with SharpMCP</Description>
     <PackageTags>mcp;model-context-protocol;server;ai;llm</PackageTags>

@@ -10,7 +10,6 @@
     
     <!-- Package Information -->
     <PackageId>SharpMCP.Tools.Common</PackageId>
-    <Version>1.0.0</Version>
     <Authors>SharpMCP Contributors</Authors>
     <Description>Common tool implementations and base classes for SharpMCP</Description>
     <PackageTags>mcp;model-context-protocol;tools;ai;llm</PackageTags>

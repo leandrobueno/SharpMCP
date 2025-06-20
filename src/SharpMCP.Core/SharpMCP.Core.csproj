@@ -10,7 +10,6 @@
     
     <!-- Package Information -->
     <PackageId>SharpMCP.Core</PackageId>
-    <Version>1.0.0</Version>
     <Authors>SharpMCP Contributors</Authors>
     <Description>Core abstractions and interfaces for building MCP servers with SharpMCP</Description>
     <PackageTags>mcp;model-context-protocol;ai;llm</PackageTags>
